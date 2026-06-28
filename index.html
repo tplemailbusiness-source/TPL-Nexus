@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TPL Nexus</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+
+<div class="background"></div>
+<div class="grain"></div>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brandMark">TN</div>
+            <div>
+                <p>Private Stream</p>
+                <h1>TPL Nexus</h1>
+            </div>
+        </div>
+
+        <nav>
+            <a class="active"><span class="material-symbols-rounded">home</span> Home</a>
+            <a><span class="material-symbols-rounded">queue_music</span> Library</a>
+            <a><span class="material-symbols-rounded">album</span> Albums</a>
+            <a><span class="material-symbols-rounded">favorite</span> Favorites</a>
+        </nav>
+
+    </aside>
+
+    <main class="main">
+
+        <div class="topBar">
+
+            <div>
+                <p id="greeting">Good evening</p>
+                <h2>Listen in cinema mode.</h2>
+            </div>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search your music...">
+
+        </div>
+
+        <div class="content">
+
+            <section class="library">
+
+                <div class="sectionHeader">
+                    <div>
+                        <p>Library</p>
+                        <h2>Your Music</h2>
+                    </div>
+                    <span id="songCount"></span>
+                </div>
+
+                <div id="songList"></div>
+
+            </section>
+
+            <section class="player">
+
+                <div class="heroGlow"></div>
+
+                <div class="coverWrap">
+                    <img
+                        id="cover"
+                        src="covers/SesameStreet.png"
+                        alt="Album Cover">
+                </div>
+
+                <div class="trackMeta">
+                    <p id="album">Now Playing</p>
+                    <h2 id="title">Loading...</h2>
+                    <p id="artist"></p>
+                </div>
+
+                <audio id="audio"></audio>
+
+                <div class="progressRow">
+                    <span id="currentTime">0:00</span>
+                    <input
+                        type="range"
+                        id="progress"
+                        value="0">
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="controls">
+
+                    <button id="prev" aria-label="Previous song">
+                        <span class="material-symbols-rounded">skip_previous</span>
+                    </button>
+
+                    <button id="play" class="playButton" aria-label="Play">
+                        <span class="material-symbols-rounded">play_arrow</span>
+                    </button>
+
+                    <button id="next" aria-label="Next song">
+                        <span class="material-symbols-rounded">skip_next</span>
+                    </button>
+
+                    <button id="lyricsToggle" aria-label="Show lyrics" aria-pressed="false">
+                        <span class="material-symbols-rounded">lyrics</span>
+                    </button>
+
+                </div>
+
+                <div class="lyricsPanel" id="lyricsPanel" aria-live="polite">
+                    <div class="lyricsHeader">
+                        <p>Beat by Beat</p>
+                        <span id="lyricsStatus">Lyrics off</span>
+                    </div>
+                    <div class="lyricsCarousel" id="lyricsCarousel">
+                        <p class="emptyLyrics">Tap the lyrics icon to follow along.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

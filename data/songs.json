@@ -1,0 +1,92 @@
+{
+  "songs": [
+    {
+      "title": "I Listen to my Body",
+      "artist": "Sesame Street",
+      "album": "Sesame Street",
+      "file": "music/I listen to my Body.mp3",
+      "cover": "covers/SesameStreet.png",
+      "theme": {
+        "primary": "#12326f",
+        "secondary": "#0e6f8f",
+        "accent": "#2ee6d6"
+      },
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "..."
+        },
+        {
+          "time": 3,
+          "text": "When I feel hungry,"
+        },
+        {
+          "time": 5.5,
+          "text": "(When I feel hungry)"
+        },
+        {
+          "time": 7,
+          "text": "that's when I eat."
+        },
+        {
+          "time": 9,
+          "text": "(That's when I eat)"
+        },
+        {
+          "time": 11,
+          "text": "When I feel restless,"
+        },
+        {
+          "time": 12.8,
+          "text": "(When I feel restless)"
+        },
+        {
+          "time": 15.6,
+          "text": "I move my feet."
+        },
+        {
+          "time": 17,
+          "text": "I move my feet"
+        },
+        {
+          "time": 36,
+          "text": "Add the final lyric line here"
+        }
+      ]
+    },
+    {
+      "title": "Pick It Up",
+      "artist": "Rachel Accurso",
+      "album": "Volume 1",
+      "file": "music/03 Pick it up.m4a",
+      "cover": "covers/SesameStreet.png",
+      "theme": {
+        "primary": "#14295c",
+        "secondary": "#0087a7",
+        "accent": "#58f0ff"
+      },
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "Intro"
+        },
+        {
+          "time": 6,
+          "text": "Add the first lyric line here"
+        },
+        {
+          "time": 14,
+          "text": "Add the next lyric line here"
+        },
+        {
+          "time": 22,
+          "text": "Add the chorus line here"
+        },
+        {
+          "time": 34,
+          "text": "Add the final lyric line here"
+        }
+      ]
+    }
+  ]
+}
