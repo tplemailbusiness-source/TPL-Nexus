@@ -12,47 +12,38 @@
         "accent": "#2ee6d6"
       },
       "lyrics": [
-        {
-          "time": 0,
-          "text": "..."
-        },
-        {
-          "time": 3,
-          "text": "When I feel hungry,"
-        },
-        {
-          "time": 5.5,
-          "text": "(When I feel hungry)"
-        },
-        {
-          "time": 7,
-          "text": "that's when I eat."
-        },
-        {
-          "time": 9,
-          "text": "(That's when I eat)"
-        },
-        {
-          "time": 11,
-          "text": "When I feel restless,"
-        },
-        {
-          "time": 12.8,
-          "text": "(When I feel restless)"
-        },
-        {
-          "time": 15.6,
-          "text": "I move my feet."
-        },
-        {
-          "time": 17,
-          "text": "I move my feet"
-        },
-        {
-          "time": 36,
-          "text": "Add the final lyric line here"
-        }
-      ]
+  { "time": 3.65, "text": "When I feel hungry," },
+  { "time": 7.58, "text": "that's when I eat." },
+  { "time": 11.37, "text": "When I feel restless," },
+  { "time": 15.57, "text": "I move my feet." },
+  { "time": 19.00, "text": "I listen to my body." },
+  { "time": 21.62, "text": "Yes, I do." },
+  { "time": 22.95, "text": "I pay attention when my body sends a clue." },
+  { "time": 28.10, "text": "It tells me what I need to know." },
+  { "time": 31.91, "text": "Like when I have to go." },
+  { "time": 36.85, "text": "When I feel tired." },
+  { "time": 40.46, "text": "I go to bed." },
+  { "time": 44.30, "text": "When I feel sick." },
+  { "time": 48.31, "text": "I rest my head." },
+  { "time": 51.90, "text": "When I feel thirsty." },
+  { "time": 56.32, "text": "I drink from my cup." },
+  { "time": 59.95, "text": "When my hands are cold." },
+  { "time": 64.22, "text": "I warm them up." },
+  { "time": 65.57, "text": "Warm them up." },
+  { "time": 66.56, "text": "Warm them up." },
+  { "time": 67.60, "text": "I listen to my body." },
+  { "time": 70.69, "text": "I pay attention when my body sends a clue." },
+  { "time": 76.69, "text": "It sends a message just for me," },
+  { "time": 80.71, "text": "like when I have to pee." },
+  { "time": 83.85, "text": "I listen to my body," },
+  { "time": 86.76, "text": "I pay attention when my body sends a clue." },
+  { "time": 92.10, "text": "It sends the new, the latest scoop." },
+  { "time": 96.14, "text": "Like when I have to poop," },
+  { "time": 98.40, "text": "whoop whoop whoop whoop." },
+  { "time": 99.94, "text": "It tells me what I need to know." },
+  { "time": 103.81, "text": "Like when I have to go" },
+  { "time": 106.11, "text": "go go go go go go go go." }
+]
     },
     {
       "title": "Pick It Up",
