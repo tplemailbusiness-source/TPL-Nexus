@@ -2,27 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#05070d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TPL Nexus">
 
     <title>TPL Nexus</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
-
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
 </head>
 <body>
 
-<div class="background"></div>
-<div class="grain"></div>
+<div class="ambient" aria-hidden="true">
+    <div class="ambientBlob blobOne"></div>
+    <div class="ambientBlob blobTwo"></div>
+    <div class="ambientBlob blobThree"></div>
+    <div class="ambientWash"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
 
-<div class="app">
+<div class="appShell">
 
-    <aside class="sidebar">
+    <button class="drawerToggle" id="drawerToggle" aria-label="Open navigation">
+        <span class="material-symbols-rounded">menu</span>
+    </button>
 
+    <aside class="sidebar" id="sidebar">
         <div class="brand">
             <div class="brandMark">TN</div>
             <div>
@@ -31,110 +41,136 @@
             </div>
         </div>
 
-        <nav>
-            <a class="active"><span class="material-symbols-rounded">home</span> Home</a>
-            <a><span class="material-symbols-rounded">queue_music</span> Library</a>
-            <a><span class="material-symbols-rounded">album</span> Albums</a>
-            <a><span class="material-symbols-rounded">favorite</span> Favorites</a>
+        <nav class="navList" aria-label="Primary navigation">
+            <button class="navItem active" data-page="home">
+                <span class="material-symbols-rounded">home</span>
+                <span>Home</span>
+            </button>
+            <button class="navItem" data-page="library">
+                <span class="material-symbols-rounded">queue_music</span>
+                <span>Library</span>
+            </button>
+            <button class="navItem" data-page="albums">
+                <span class="material-symbols-rounded">album</span>
+                <span>Albums</span>
+            </button>
+            <button class="navItem" data-page="artists">
+                <span class="material-symbols-rounded">artist</span>
+                <span>Artists</span>
+            </button>
+            <button class="navItem" data-page="favorites">
+                <span class="material-symbols-rounded">favorite</span>
+                <span>Favorites</span>
+            </button>
+            <button class="navItem" data-page="settings">
+                <span class="material-symbols-rounded">settings</span>
+                <span>Settings</span>
+            </button>
         </nav>
-
     </aside>
 
+    <div class="drawerScrim" id="drawerScrim"></div>
+
     <main class="main">
-
-        <div class="topBar">
-
+        <header class="topBar">
             <div>
                 <p id="greeting">Good evening</p>
-                <h2>Listen in cinema mode.</h2>
+                <h2 id="pageTitle">Home</h2>
             </div>
 
-            <input
-                type="text"
-                id="search"
-                placeholder="Search your music...">
+            <label class="searchWrap" for="search">
+                <span class="material-symbols-rounded">search</span>
+                <input type="text" id="search" placeholder="Search songs, artists, albums...">
+            </label>
+        </header>
 
-        </div>
-
-        <div class="content">
-
-            <section class="library">
-
-                <div class="sectionHeader">
-                    <div>
-                        <p>Library</p>
-                        <h2>Your Music</h2>
-                    </div>
-                    <span id="songCount"></span>
-                </div>
-
-                <div id="songList"></div>
-
-            </section>
-
-            <section class="player">
-
-                <div class="heroGlow"></div>
-
-                <div class="coverWrap">
-                    <img
-                        id="cover"
-                        src="covers/SesameStreet.png"
-                        alt="Album Cover">
-                </div>
-
-                <div class="trackMeta">
-                    <p id="album">Now Playing</p>
-                    <h2 id="title">Loading...</h2>
-                    <p id="artist"></p>
-                </div>
-
-                <audio id="audio"></audio>
-
-                <div class="progressRow">
-                    <span id="currentTime">0:00</span>
-                    <input
-                        type="range"
-                        id="progress"
-                        value="0">
-                    <span id="duration">0:00</span>
-                </div>
-
-                <div class="controls">
-
-                    <button id="prev" aria-label="Previous song">
-                        <span class="material-symbols-rounded">skip_previous</span>
-                    </button>
-
-                    <button id="play" class="playButton" aria-label="Play">
-                        <span class="material-symbols-rounded">play_arrow</span>
-                    </button>
-
-                    <button id="next" aria-label="Next song">
-                        <span class="material-symbols-rounded">skip_next</span>
-                    </button>
-
-                    <button id="lyricsToggle" aria-label="Show lyrics" aria-pressed="false">
-                        <span class="material-symbols-rounded">lyrics</span>
-                    </button>
-
-                </div>
-
-                <div class="lyricsPanel" id="lyricsPanel" aria-live="polite">
-                    <div class="lyricsHeader">
-                        <p>Beat by Beat</p>
-                        <span id="lyricsStatus">Lyrics off</span>
-                    </div>
-                    <div class="lyricsCarousel" id="lyricsCarousel">
-                        <p class="emptyLyrics">Tap the lyrics icon to follow along.</p>
-                    </div>
-                </div>
-
-            </section>
-
-        </div>
-
+        <section class="pageSurface" id="pageSurface" aria-live="polite"></section>
     </main>
+
+    <section class="playerShell" id="playerShell" aria-label="Now playing">
+        <div class="playerGlow"></div>
+
+        <button class="cinematicToggle" id="cinematicToggle" aria-label="Open cinematic mode">
+            <span class="material-symbols-rounded">fullscreen</span>
+        </button>
+
+        <div class="nowPlayingCore">
+            <button class="coverButton" id="expandPlayer" aria-label="Expand now playing">
+                <img id="cover" src="covers/SesameStreet.png" alt="Album Cover">
+            </button>
+
+            <div class="trackMeta">
+                <p id="album">Now Playing</p>
+                <h2 id="title">Loading...</h2>
+                <p id="artist"></p>
+            </div>
+        </div>
+
+        <audio id="audio"></audio>
+
+        <div class="progressRow">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progress" value="0" aria-label="Playback progress">
+            <span id="remainingTime">-0:00</span>
+        </div>
+
+        <div class="controls">
+            <button id="shuffle" aria-label="Turn shuffle on" aria-pressed="false">
+                <span class="material-symbols-rounded">shuffle</span>
+            </button>
+            <button id="prev" aria-label="Previous song">
+                <span class="material-symbols-rounded">skip_previous</span>
+            </button>
+            <button id="play" class="playButton" aria-label="Play">
+                <span class="material-symbols-rounded">play_arrow</span>
+            </button>
+            <button id="next" aria-label="Next song">
+                <span class="material-symbols-rounded">skip_next</span>
+            </button>
+            <button id="repeat" aria-label="Turn repeat on" aria-pressed="false">
+                <span class="material-symbols-rounded">repeat</span>
+            </button>
+        </div>
+
+        <div class="playerActions">
+            <button id="favoriteCurrent" aria-label="Favorite current song" aria-pressed="false">
+                <span class="material-symbols-rounded">favorite</span>
+            </button>
+            <button id="libraryCurrent" aria-label="Add current song to Library" aria-pressed="false">
+                <span class="material-symbols-rounded">library_add</span>
+            </button>
+            <button id="lyricsToggle" aria-label="Show lyrics" aria-pressed="false">
+                <span class="material-symbols-rounded">lyrics</span>
+            </button>
+            <label class="volumeControl" for="volume">
+                <span class="material-symbols-rounded">volume_up</span>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.9" aria-label="Volume">
+            </label>
+        </div>
+
+        <div class="lyricsPanel" id="lyricsPanel" aria-live="polite">
+            <div class="lyricsHeader">
+                <p>Beat by Beat</p>
+                <span id="lyricsStatus">Lyrics off</span>
+            </div>
+            <div class="lyricsCarousel" id="lyricsCarousel">
+                <p class="emptyLyrics">Tap the lyrics icon to follow along.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cinematicMode" id="cinematicMode" aria-label="Cinematic mode" aria-hidden="true">
+        <button class="cinematicClose" id="cinematicClose" aria-label="Close cinematic mode">
+            <span class="material-symbols-rounded">close_fullscreen</span>
+        </button>
+        <img id="cinematicCover" src="covers/SesameStreet.png" alt="">
+        <div class="cinematicCopy">
+            <p id="cinematicAlbum">Now Playing</p>
+            <h2 id="cinematicTitle">Loading...</h2>
+            <p id="cinematicArtist"></p>
+        </div>
+        <div class="cinematicLyrics" id="cinematicLyrics"></div>
+    </section>
 
 </div>
 
