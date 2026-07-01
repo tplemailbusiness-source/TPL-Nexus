@@ -76,8 +76,26 @@
         {
           "time": 34,
           "text": "Add the final lyric line here"
+
+    },
+    {
+      "title": "Second Place Legends",
+      "artist": "Suno Gabby Voice",
+      "album": "Suno Sings - Second Place Legends - EP",
+      "file": "music/Second Place Legends.mp3",
+      "cover": "covers/",
+      "theme": {
+        "primary": "#2D2A53",
+        "secondary": "#615899",
+        "accent": "#4A7CFF"
+      },
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "No Lyrics"
         }
+        
+          
       ]
     }
   ]
-}
