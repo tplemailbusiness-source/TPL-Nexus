@@ -11,7 +11,7 @@ const CORE_ASSETS = [
     "./icons/icon-192.png",
     "./icons/icon-512.png",
     "./icons/apple-touch-icon.png",
-    "./covers/SesameStreet.png",
+    "./covers/SesameStreet.gif",
     "./music/I listen to my Body.mp3",
     "./music/03 Pick it up.m4a"
 ];
