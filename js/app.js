@@ -739,7 +739,9 @@ function closeCinematicMode(){
 }
 
 function registerServiceWorker(){
-    // Service worker temporarily disabled while developing
+    if("serviceWorker" in navigator){
+        navigator.serviceWorker.register("service-worker.js").catch(()=>{});
+    }
 }
 
 document.querySelectorAll(".navItem").forEach((item)=>{

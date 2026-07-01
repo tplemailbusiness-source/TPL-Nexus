@@ -1,4 +1,4 @@
-const CACHE_NAME = "tpl-nexus-v1-beta";
+const CACHE_NAME = "tpl-nexus-v1.1-beta";
 
 const CORE_ASSETS = [
     "./",
